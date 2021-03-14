@@ -1,4 +1,5 @@
 import discord, asyncio, random
+import os
 
 game = discord.Game("인사봇 성공!")
 client = discord.Client()
@@ -78,4 +79,6 @@ async def on_message(message):
         await message.channel.send(f"{message.author.mention}님의 지니팩 결과")
         await message.channel.send(random.choice(['남동진 7일', '이유리 7일', '남동진 7일', '이유리 7일', '남동진 7일', '이유리 7일', '남동진 7일', '이유리 7일','남동진 7일', '이유리 7일', '남동진 7일', '이유리 7일', '남동진 7일', '이유리 7일', '남동진 7일', '이유리 7일', '남동진 30일', '이유리 30일', '남동진 30일', '이유리 30일', '남동진 무제한', '남동진 무제한']))
 
-client.run('ODIwMjQxOTczMjQ3NzM3ODc3.YEyT3Q.BSvo1sPc0g_2y_zmFolNzZoOUhU')
+        
+eccess_token = os.environ["BOT_TOKEN"]
+client.run(eccess_token)
